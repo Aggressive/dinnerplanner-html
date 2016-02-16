@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dinner planner</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+		<!-- Own CSS -->
+		<link rel="stylesheet" href="styles/style.css">
+	</head>
+	<body>
+		<div class="container container_own">
+			<div id="exampleView">
+				<div class="row header">
+					<h1>HOMELETTE</h1>
+					<h4>From the best chefs in the world directly into your kitchen</h4>
+				</div>
+				<div class="row">
+
+					<div class="col-md-3">
+						<div class="row sidebar_top">
+							<h3>My Dinner</h3>
+							Guests: 
+							<button id="minusGuest" class="btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
+							<span id="numberOfGuests"></span>
+							<button id="plusGuest" class="btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+						<div class="row dishlist_top">
+							Dish Name<span class="pull-right">Cost</span>
+						</div>
+						<div class="row dishlist">
+							<ul>
+								<li>Pending<span class="pull-right">77.20</span></li>
+							</ul>
+						</div>
+						<div class="row dishlist_bottom">
+							<span class="pull-right">SEK 77.20</span><br /><br />
+							<button class="center-block btn submit_btn">Confirm dinner</button>
+						</div>
+					</div>
+
+					<div class="col-md-9 mainframe">
+						<div class="row">
+							<div class="col-md-6 recipe_presentation">
+								<h2>TOAST</h2>
+								<img src="images/toast.jpg">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae ullamcorper nisi, ac malesuada tortor. In a felis malesuada, pellentesque arcu sed, imperdiet ligula. Curabitur nibh risus, aliquet a eros at, eleifend efficitur dolor.</p>
+								<button class="btn submit_btn">Back to Select Dish</button>
+							</div>
+							<div class="col-md-6 recipe_ingredients">
+								<b>INGREDIENTS FOR 4 PEOPLE</b><br />
+								<table class="table table_ingredients">
+									<tr>
+										<td>2 tbsp</td>
+										<td>olive oil</td>
+										<td>SEK</td>
+										<td>0.20</td>
+									</tr>
+									<tr>
+										<td>750 g</td>
+										<td>lean beef mince</td>
+										<td>SEK</td>
+										<td>10.00</td>
+									</tr>
+									<tr>
+										<td>90 g</td>
+										<td>pack roscuitto</td>
+										<td>SEK</td>
+										<td>15.00</td>
+									</tr>
+									<tr>
+										<td>100 ml</td>
+										<td>tomato sauce</td>
+										<td>SEK</td>
+										<td>10.00</td>
+									</tr>
+									<tr>
+										<td>200 ml</td>
+										<td>hot beef stock</td>
+										<td>SEK</td>
+										<td>20.00</td>
+									</tr>
+									<tr>
+										<td>300 g</td>
+										<td>fresh pack lasagne sheets</td>
+										<td>SEK</td>
+										<td>5.00</td>
+									</tr>
+									<tr>
+										<td>125 g</td>
+										<td>ball mozzarella</td>
+										<td>SEK</td>
+										<td>12.00</td>
+									</tr>
+									<tr>
+										<td>100 ml</td>
+										<td>white sauce</td>
+										<td>SEK</td>
+										<td>5.00</td>
+									</tr>
+									<tr class="ingredients_sum">
+										<td colspan=2><button class="btn submit_btn">Confirm Dish</button></td>
+										<td>SEK</td>
+										<td>77.20</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="row recipe_preparations">
+							<h2>Preparations</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+		<!-- The application JavaScript code -->
+		<script src="js/app.js"></script>
+		<script src="js/model/dinnerModel.js"></script>
+		<script src="js/view/exampleView.js"></script>
+		<script src="js/view/exampleViewController.js"></script>
+	</body>
+</html>
