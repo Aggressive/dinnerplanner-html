@@ -13,38 +13,40 @@
 		<link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body>
-		<div class="container" id="container">
+		<div class="container container_own">
 			<div id="exampleView">
-				<div class="row" id="header">
+				<div class="row header">
 					<h1>HOMELETTE</h1>
 					<h4>From the best chefs in the world directly into your kitchen</h4>
 				</div>
 				<div class="row">
-
 					<div class="col-md-3">
-						<div class="row" id="sidebar_top">
+						<div class="row sidebar_top">
 							<h3>My Dinner</h3>
-							Number of guests: <span id="numberOfGuests"></span><br />
-							<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-							<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+							Guests: 
+							<button id="minusGuest" class="btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
+							<span id="numberOfGuests"></span>
+							<button id="plusGuest" class="btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
 						</div>
-						<div class="row" id="dishlist_top">
-							<span class="pull-left">Dish Name</span><span class="pull-right">Cost</span>
+						<div class="row dishlist_top">
+							Dish Name<span class="pull-right">Cost</span>
 						</div>
-						<div class="row" id="dishlist">
-							<span class="pull-left">Pending</span><span class="pull-right">0.00</span>
+						<div class="row dishlist">
+							<ul>
+								<li>Pending<span class="pull-right">0.00</span></li>
+							</ul>
 						</div>
-						<div class="row" id="dishlist_bottom">
+						<div class="row dishlist_bottom">
 							<span class="pull-right">SEK 0.00</span><br /><br />
-							<button class="center-block" id="submit_btn">Confirm dinner</button>
+							<button class="center-block btn submit_btn" disabled="disabled">Confirm dinner</button>
 						</div>
 					</div>
 
-					<div class="col-md-9" id="mainframe">
-						<div class="row" id="options">
+					<div class="col-md-9 mainframe">
+						<div class="row options">
 							<b>SELECT DISH</b><br />
 							<form>
-							<input type="text"><input type="submit" value="search" id="submit_btn">
+							<input type="text"><input type="submit" value="search" class="btn-sm submit_btn">
 							<select name="dishtype">
 								<option value="starter">Starter</option>
 								<option value="main">Main</option>
@@ -52,32 +54,32 @@
 							</select>
 							</form>
 						</div>
-						<div class="row" id="recipes">
-							<a href="#" id="dish_small">
+						<div class="row recipes">
+							<a href="#" class="dish_small">
 								<img src="images/bakedbrie.jpg" class="img-thumbnail center-block">
 								<h1>Baked brie</h1>
-								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
 							</a>
-							<a href="#" id="dish_small">
+							<a href="#" class="dish_small">
 								<img src="images/toast.jpg" class="img-thumbnail center-block">
 								<h1>Toast</h1>
-								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
 							</a>
-							<a href="#" id="dish_small">
+							<a href="#" class="dish_small">
 								<img src="images/sourdough.jpg" class="img-thumbnail center-block">
 								<h1>Sour dough</h1>
-								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
 							</a>
-							<a href="#" id="dish_small">
+							<a href="#" class="dish_small">
 								<img src="images/meatballs.jpg" class="img-thumbnail center-block">
 								<h1>Meatballs</h1>
-								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
 							
 							</a>
-							<a href="#" id="dish_small">
+							<a href="#" class="dish_small">
 								<img src="images/icecream.jpg" class="img-thumbnail center-block">
 								<h1>Icecream</h1>
-								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
 							</a>
 						</div>
 					</div>

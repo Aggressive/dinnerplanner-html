@@ -13,42 +13,45 @@
 		<link rel="stylesheet" href="styles/style.css">
 	</head>
 	<body>
-		<div class="container" id="container">
+		<div class="container container_own">
 			<div id="exampleView">
-				<div class="row" id="header">
+				<div class="row header">
 					<h1>HOMELETTE</h1>
 					<h4>From the best chefs in the world directly into your kitchen</h4>
 				</div>
 				<div class="row">
 
 					<div class="col-md-3">
-						<div class="row" id="sidebar_top">
+						<div class="row sidebar_top">
 							<h3>My Dinner</h3>
-							Number of guests: <span id="numberOfGuests"></span><br />
-							<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
-							<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+							Guests: 
+							<button id="minusGuest" class="btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
+							<span id="numberOfGuests"></span>
+							<button id="plusGuest" class="btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
 						</div>
-						<div class="row" id="dishlist_top">
-							<span class="pull-left">Dish Name</span><span class="pull-right">Cost</span>
+						<div class="row dishlist_top">
+							Dish Name<span class="pull-right">Cost</span>
 						</div>
-						<div class="row" id="dishlist">
-							<span class="pull-left">Pending</span><span class="pull-right">77.20</span>
+						<div class="row dishlist">
+							<ul>
+								<li>Pending<span class="pull-right">77.20</span></li>
+							</ul>
 						</div>
-						<div class="row" id="dishlist_bottom">
+						<div class="row dishlist_bottom">
 							<span class="pull-right">SEK 77.20</span><br /><br />
-							<button class="center-block" id="submit_btn">Confirm dinner</button>
+							<button class="center-block btn submit_btn">Confirm dinner</button>
 						</div>
 					</div>
 
-					<div class="col-md-9" id="mainframe">
+					<div class="col-md-9 mainframe">
 						<div class="row">
-							<div class="col-md-6" id="recipe_presentation">
+							<div class="col-md-6 recipe_presentation">
 								<h2>TOAST</h2>
 								<img src="images/toast.jpg">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae ullamcorper nisi, ac malesuada tortor. In a felis malesuada, pellentesque arcu sed, imperdiet ligula. Curabitur nibh risus, aliquet a eros at, eleifend efficitur dolor.</p>
-								<button id="submit_btn">back to Select Dish</button>
+								<button class="btn submit_btn">Back to Select Dish</button>
 							</div>
-							<div class="col-md-6" id="recipe_ingredients">
+							<div class="col-md-6 recipe_ingredients">
 								<b>INGREDIENTS FOR 4 PEOPLE</b><br />
 								<table class="table table_ingredients">
 									<tr>
@@ -99,15 +102,15 @@
 										<td>SEK</td>
 										<td>5.00</td>
 									</tr>
-									<tr id="ingredients_sum">
-										<td colspan=2><button id="submit_btn">Confirm Dish</button></td>
+									<tr class="ingredients_sum">
+										<td colspan=2><button class="btn submit_btn">Confirm Dish</button></td>
 										<td>SEK</td>
 										<td>77.20</td>
 									</tr>
 								</table>
 							</div>
 						</div>
-						<div class="row" id="recipe_preparations">
+						<div class="row recipe_preparations">
 							<h2>Preparations</h2>
 						</div>
 					</div>
