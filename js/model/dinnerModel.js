@@ -1,52 +1,68 @@
 //DinnerModel Object constructor
-var numberOfGuests = 4;
-getNumberOfGuests = function() {
-		return numberOfGuests;
-	}
 var DinnerModel = function() {
- 
-	//TODO Lab 2 implement the data structure that will hold number of guest
-	// and selected dinner options for dinner menu
-
+	this.numberOfGuests = 4;
+	this.selectedDishes = [];
+	//this.options = []; were there any options?
 
 	this.setNumberOfGuests = function(num) {
-		//TODO Lab 2
+		this.numberOfGuests = num;
 	}
 
-	/* should return 
 	this.getNumberOfGuests = function() {
-		//TODO Lab 2
-	}*/
+		return this.numberOfGuests;
+	}
 
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
-		//TODO Lab 2
+		return $(this.selectedDishes).filter(function(index,dish) {
+			return dish.type == type;
+	 });	
 	}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		//TODO Lab 2
+		return $(this.selectedDishes);
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		//TODO Lab 2
+		var ingList = [];
+	  	for(key in this.selectedDishes){
+	  		ingList.push(this.selectedDishes[key].ingredients);
+		}
+		return ingList;
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
-		//TODO Lab 2
+		var totalPrice = 0;
+		var ingList = this.getAllIngredients();
+		for(ingArray in ingList){
+			for(object in ingArray){
+				totalPrice += ingList[ingArray][object].price;
+				console.log("TOTAL PRICE:" + totalPrice;
+			}
+		}
+		return totalPrice;
+
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
-		//TODO Lab 2 
+		this.selectedDishes.push(this.getDish(id));
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
-		//TODO Lab 2
+		var i = 0;
+	 	for(key in this.selectedDishes){
+			if(this.selectedDishes[key].id == id) {
+				this.selectedDishes.splice(i,1);
+				return;
+			}
+			i++;
+		}
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
