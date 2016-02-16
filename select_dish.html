@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dinner planner</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+		<!-- Own CSS -->
+		<link rel="stylesheet" href="styles/style.css">
+	</head>
+	<body>
+		<div class="container" id="container">
+			<div id="exampleView">
+				<div class="row" id="header">
+					<h1>HOMELETTE</h1>
+					<h4>From the best chefs in the world directly into your kitchen</h4>
+				</div>
+				<div class="row">
+
+					<div class="col-md-3">
+						<div class="row" id="sidebar_top">
+							<h3>My Dinner</h3>
+							Number of guests: <span id="numberOfGuests"></span><br />
+							<button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+							<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+						<div class="row" id="dishlist_top">
+							<span class="pull-left">Dish Name</span><span class="pull-right">Cost</span>
+						</div>
+						<div class="row" id="dishlist">
+							<span class="pull-left">Pending</span><span class="pull-right">0.00</span>
+						</div>
+						<div class="row" id="dishlist_bottom">
+							<span class="pull-right">SEK 0.00</span><br /><br />
+							<button class="center-block" id="submit_btn">Confirm dinner</button>
+						</div>
+					</div>
+
+					<div class="col-md-9" id="mainframe">
+						<div class="row" id="options">
+							<b>SELECT DISH</b><br />
+							<form>
+							<input type="text"><input type="submit" value="search" id="submit_btn">
+							<select name="dishtype">
+								<option value="starter">Starter</option>
+								<option value="main">Main</option>
+								<option value="dessert">Dessert</option>
+							</select>
+							</form>
+						</div>
+						<div class="row" id="recipes">
+							<a href="#" id="dish_small">
+								<img src="images/bakedbrie.jpg" class="img-thumbnail center-block">
+								<h1>Baked brie</h1>
+								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+							</a>
+							<a href="#" id="dish_small">
+								<img src="images/toast.jpg" class="img-thumbnail center-block">
+								<h1>Toast</h1>
+								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+							</a>
+							<a href="#" id="dish_small">
+								<img src="images/sourdough.jpg" class="img-thumbnail center-block">
+								<h1>Sour dough</h1>
+								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+							</a>
+							<a href="#" id="dish_small">
+								<img src="images/meatballs.jpg" class="img-thumbnail center-block">
+								<h1>Meatballs</h1>
+								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+							
+							</a>
+							<a href="#" id="dish_small">
+								<img src="images/icecream.jpg" class="img-thumbnail center-block">
+								<h1>Icecream</h1>
+								<p>Text om denna rätt hahah eher dskd anfkasd aspd k</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+		<!-- The application JavaScript code -->
+		<script src="js/app.js"></script>
+		<script src="js/model/dinnerModel.js"></script>
+		<script src="js/view/exampleView.js"></script>
+		<script src="js/view/exampleViewController.js"></script>
+	</body>
+</html>
