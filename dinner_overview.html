@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dinner planner</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+		<!-- Own CSS -->
+		<link rel="stylesheet" href="styles/style.css">
+	</head>
+	<body>
+		<div class="container container_own">
+			<div id="exampleView">
+				<div class="row header">
+					<h1>HOMELETTE</h1>
+					<h4>From the best chefs in the world directly into your kitchen</h4>
+				</div>
+				<div class="row my_dinner">
+					<p>My Dinner: 4 people</p><span class="pull-right"><button class="btn submit_btn">Go back and edit dinner</button></span>
+				</div>
+				<div class="row center">
+				
+					<div class="dish_small">
+						<img src="images/toast.jpg" class="img-thumbnail center-block">
+						<h1>Toast</h1>
+						<h4 class="text-right">77.20 SEK</h4>
+					</div>
+					<div class="dish_small">
+						<img src="images/meatballs.jpg" class="img-thumbnail center-block">
+						<h1>Meatballs</h1>
+						<h4 class="text-right">180.60 SEK</h4>
+					</div>
+					<div class="dish_small">
+						<img src="images/icecream.jpg" class="img-thumbnail center-block">
+						<h1>Icecream</h1>
+						<h4 class="text-right">83.40 SEK</h4>
+					</div>
+					<div class="total_price">
+						Total:<br />
+						<h4>341.20 SEK</h4>
+					</div>
+					<br /><br />
+					<button class="btn print_btn">Print Full Recipe</button>
+				
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+		<!-- The application JavaScript code -->
+		<script src="js/app.js"></script>
+		<script src="js/model/dinnerModel.js"></script>
+		<script src="js/view/exampleView.js"></script>
+		<script src="js/view/exampleViewController.js"></script>
+	</body>
+</html>
