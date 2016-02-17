@@ -12,7 +12,7 @@
 		<!-- Own CSS -->
 		<link rel="stylesheet" href="styles/style.css">
 	</head>
-	<body>
+	<body class="dish">
 		<div class="container container_own">
 			<div id="exampleView">
 				<div class="row header">
@@ -34,11 +34,11 @@
 						</div>
 						<div class="row dishlist">
 							<ul>
-								<li>Pending<span class="pull-right">77.20</span></li>
+								<li>Pending<span class="pull-right" id="pending_dish_price"></span></li>
 							</ul>
 						</div>
 						<div class="row dishlist_bottom">
-							<span class="pull-right">SEK 77.20</span><br /><br />
+							<span class="pull-right">SEK <span id="total_menu_price"></span></span><br /><br />
 							<button class="center-block btn submit_btn">Confirm dinner</button>
 						</div>
 					</div>
@@ -46,72 +46,21 @@
 					<div class="col-md-9 mainframe">
 						<div class="row">
 							<div class="col-md-6 recipe_presentation">
-								<h2>TOAST</h2>
-								<img src="images/toast.jpg">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae ullamcorper nisi, ac malesuada tortor. In a felis malesuada, pellentesque arcu sed, imperdiet ligula. Curabitur nibh risus, aliquet a eros at, eleifend efficitur dolor.</p>
+								<h2><span id="dish_name"></span></h2>
+								<h4><span id="dish_type"></span></h4>
+								<span id="dish_picture"></span><br /><br />
+								
 								<button class="btn submit_btn">Back to Select Dish</button>
 							</div>
 							<div class="col-md-6 recipe_ingredients">
-								<b>INGREDIENTS FOR 4 PEOPLE</b><br />
-								<table class="table table_ingredients">
-									<tr>
-										<td>2 tbsp</td>
-										<td>olive oil</td>
-										<td>SEK</td>
-										<td>0.20</td>
-									</tr>
-									<tr>
-										<td>750 g</td>
-										<td>lean beef mince</td>
-										<td>SEK</td>
-										<td>10.00</td>
-									</tr>
-									<tr>
-										<td>90 g</td>
-										<td>pack roscuitto</td>
-										<td>SEK</td>
-										<td>15.00</td>
-									</tr>
-									<tr>
-										<td>100 ml</td>
-										<td>tomato sauce</td>
-										<td>SEK</td>
-										<td>10.00</td>
-									</tr>
-									<tr>
-										<td>200 ml</td>
-										<td>hot beef stock</td>
-										<td>SEK</td>
-										<td>20.00</td>
-									</tr>
-									<tr>
-										<td>300 g</td>
-										<td>fresh pack lasagne sheets</td>
-										<td>SEK</td>
-										<td>5.00</td>
-									</tr>
-									<tr>
-										<td>125 g</td>
-										<td>ball mozzarella</td>
-										<td>SEK</td>
-										<td>12.00</td>
-									</tr>
-									<tr>
-										<td>100 ml</td>
-										<td>white sauce</td>
-										<td>SEK</td>
-										<td>5.00</td>
-									</tr>
-									<tr class="ingredients_sum">
-										<td colspan=2><button class="btn submit_btn">Confirm Dish</button></td>
-										<td>SEK</td>
-										<td>77.20</td>
-									</tr>
+								<b>INGREDIENTS FOR <span id="numberOfGuests2"></span> PEOPLE</b><br />
+								<table class="table table_ingredients" id="ingredients_table">
 								</table>
 							</div>
 						</div>
 						<div class="row recipe_preparations">
 							<h2>Preparations</h2>
+							<span id="dish_prep"></span>
 						</div>
 					</div>
 				</div>

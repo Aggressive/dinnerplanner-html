@@ -12,7 +12,7 @@
 		<!-- Own CSS -->
 		<link rel="stylesheet" href="styles/style.css">
 	</head>
-	<body>
+	<body class="dinner_overview">
 		<div class="container container_own">
 			<div id="exampleView">
 				<div class="row header">
@@ -20,30 +20,10 @@
 					<h4>From the best chefs in the world directly into your kitchen</h4>
 				</div>
 				<div class="row my_dinner">
-					<p>My Dinner: 4 people</p><span class="pull-right"><button class="btn submit_btn">Go back and edit dinner</button></span>
+					<p>My Dinner: <span id="numberOfGuests"></span> people</p><span class="pull-right"><button class="btn submit_btn">Go back and edit dinner</button></span>
 				</div>
+				<div class="row center" id="chosen_recipes"></div>
 				<div class="row center">
-				
-					<div class="dish_small">
-						<img src="images/toast.jpg" class="img-thumbnail center-block">
-						<h1>Toast</h1>
-						<h4 class="text-right">77.20 SEK</h4>
-					</div>
-					<div class="dish_small">
-						<img src="images/meatballs.jpg" class="img-thumbnail center-block">
-						<h1>Meatballs</h1>
-						<h4 class="text-right">180.60 SEK</h4>
-					</div>
-					<div class="dish_small">
-						<img src="images/icecream.jpg" class="img-thumbnail center-block">
-						<h1>Icecream</h1>
-						<h4 class="text-right">83.40 SEK</h4>
-					</div>
-					<div class="total_price">
-						Total:<br />
-						<h4>341.20 SEK</h4>
-					</div>
-					<br /><br />
 					<button class="btn print_btn">Print Full Recipe</button>
 				
 				</div>
