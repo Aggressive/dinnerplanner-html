@@ -14,5 +14,6 @@ var ExampleView = function (container) {
 	model.addDishToMenu(3);
 	console.log(model.getFullMenu());
 	console.log(model.getAllIngredients());
+	console.log(model.getTotalMenuPrice());
 }
  

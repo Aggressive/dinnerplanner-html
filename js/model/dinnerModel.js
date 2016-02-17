@@ -38,12 +38,11 @@ var DinnerModel = function() {
 		var totalPrice = 0;
 		var ingList = this.getAllIngredients();
 		for(ingArray in ingList){
-			for(object in ingArray){
+			for(object in ingList[ingArray]){
 				totalPrice += ingList[ingArray][object].price;
-				console.log("TOTAL PRICE:" + totalPrice;
 			}
 		}
-		return totalPrice;
+		return totalPrice * this.numberOfGuests;
 
 	}
 
