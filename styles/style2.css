@@ -1,0 +1,29 @@
+body {
+	background-color: #dedede;
+}
+
+.container {
+	background-color: #fff;
+}
+
+.header {
+	height: 50px;
+	border-bottom: 2px solid #000;
+}
+
+.content {
+
+}
+
+.sidebar {
+	border-right: 2px solid #000;
+}
+
+.mainframe {
+	
+}
+
+.footer {
+	border-top: 2px solid #000;
+	text-align: center;
+}
