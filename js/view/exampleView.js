@@ -8,10 +8,10 @@ var ExampleView = function (container,model) {
 	 */
 	this.update = function (obj) {
 		if(obj === "setNumberOfGuests"){
-			this.numberOfGuests = model.getNumberOfGuests();
+			ingredientsTable();
 		}
 		else if(obj === "addDishToMenu" || obj = "removeDishFromMenu"){
-			this.selectedDishes = getFullMenu();
+			this.chosenRecipes();
 		}
 	}
 
@@ -103,7 +103,7 @@ var ExampleView = function (container,model) {
   	this.numberOfGuests = container.find("#numberOfGuests");
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
-	model.addObserver(this)
+	model.addObserver(this);
 	model.setNumberOfGuests(4);
 	this.numberOfGuests.html(model.getNumberOfGuests());
 
