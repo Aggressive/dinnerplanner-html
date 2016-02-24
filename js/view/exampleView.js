@@ -10,7 +10,7 @@ var ExampleView = function (container,model) {
 		if(obj === "setNumberOfGuests"){
 			ingredientsTable();
 		}
-		else if(obj === "addDishToMenu" || obj = "removeDishFromMenu"){
+		else if(obj === "addDishToMenu" || obj === "removeDishFromMenu"){
 			this.chosenRecipes();
 		}
 	}

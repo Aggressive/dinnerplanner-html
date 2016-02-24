@@ -7,15 +7,16 @@ var DinnerModel = function() {
 
 	//Adds new observer to the array
 	this.addObserver = function(observer) {
-		observers.push(observer);
+		this.observers.push(observer);
+		console.log(this.observers);
 	} 
 	//Will call the update method on all the observers in the array
 	//Passing an argument can be useful to differentiate between different changes. 
 	//Consider it as an information you send to the view to tell it what specifically changed,
 	// so that the view doesn't need to update everything, but just specific components.
 	var notifyObservers = function(obj) {
-		for (observer in obj){
-			exampleView.update(observer);
+		for (observer in observers){
+			observer.update(obj);
 		}
 	}
 
@@ -303,7 +304,7 @@ var DinnerModel = function() {
 		'name':'MD 3',
 		'type':'main dish',
 		'image':'meatballs.jpg',
-		'descPassing an argument can be useful to differentiate between different changes. Consider it as an information you send to the view to tell it what specifically changed, so that the view doesn't need to update everything, but just specific components.ription':"Here is how you make it... Lore ipsum...",
+		'descPassing an argument can be useful to differentiate between different changes. Consider it as an information you send to the view to tell it what specifically changed, so that the view doesn\'t need to update everything, but just specific components.ription':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
 			'quantity':2,
