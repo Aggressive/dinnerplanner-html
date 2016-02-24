@@ -2,10 +2,26 @@
 var DinnerModel = function() {
 	this.numberOfGuests = 4;
 	this.selectedDishes = [];
+	this.observers = [];
 	//this.options = []; were there any options?
+
+	//Adds new observer to the array
+	this.addObserver = function(observer) {
+		observers.push(observer);
+	} 
+	//Will call the update method on all the observers in the array
+	//Passing an argument can be useful to differentiate between different changes. 
+	//Consider it as an information you send to the view to tell it what specifically changed,
+	// so that the view doesn't need to update everything, but just specific components.
+	var notifyObservers = function(obj) {
+		for (observer in obj){
+			exampleView.update(observer);
+		}
+	}
 
 	this.setNumberOfGuests = function(num) {
 		this.numberOfGuests = num;
+		notifyObservers("setNumberOfGuests");
 	}
 
 	this.getNumberOfGuests = function() {
@@ -50,6 +66,7 @@ var DinnerModel = function() {
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		this.selectedDishes.push(this.getDish(id));
+		notifyObservers("addDishToMenu");
 	}
 
 	//Removes dish from menu
@@ -62,6 +79,7 @@ var DinnerModel = function() {
 			}
 			i++;
 		}
+		notifyObservers("removeDishFromMenu");
 	}
 
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
@@ -269,7 +287,7 @@ var DinnerModel = function() {
 		'name':'MD 3',
 		'type':'main dish',
 		'image':'meatballs.jpg',
-		'description':"Here is how you make it... Lore ipsum...",
+		'descPassing an argument can be useful to differentiate between different changes. Consider it as an information you send to the view to tell it what specifically changed, so that the view doesn't need to update everything, but just specific components.ription':"Here is how you make it... Lore ipsum...",
 		'ingredients':[{ 
 			'name':'ingredient 1',
 			'quantity':2,
