@@ -31,9 +31,14 @@ var DinnerModel = function() {
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
 		return $(this.selectedDishes).filter(function(index,dish) {
-			return dish.type == type;
-	 });	
+			if(type) {
+				return dish.type == type;
+			} else {
+				return true;
+			}
+	 	});
 	}
+
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
@@ -60,6 +65,17 @@ var DinnerModel = function() {
 		}
 		return totalPrice * this.numberOfGuests;
 
+	}
+
+	//Return total price for one dish.
+	this.getDishPrice = function(id) {
+		var totalPrice = 0;
+		//var ingList = this.getAllIngredients();
+		var ingArray = this.getDish(id).ingredients;
+		for(object in ingArray){
+			totalPrice += ingArray[object].price;
+		}
+		return totalPrice * this.numberOfGuests;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu

@@ -12,7 +12,7 @@
 		<!-- Own CSS -->
 		<link rel="stylesheet" href="styles/style.css">
 	</head>
-	<body>
+	<body class="select_dish">
 		<div class="container container_own">
 			<div id="exampleView">
 				<div class="row header">
@@ -33,11 +33,11 @@
 						</div>
 						<div class="row dishlist">
 							<ul>
-								<li>Pending<span class="pull-right">0.00</span></li>
+								<li>Pending<span class="pull-right" id="pending_dish_price"></span></li>
 							</ul>
 						</div>
 						<div class="row dishlist_bottom">
-							<span class="pull-right">SEK 0.00</span><br /><br />
+							<span class="pull-right">SEK <span id="total_menu_price"></span></span><br /><br />
 							<button class="center-block btn submit_btn" disabled="disabled">Confirm dinner</button>
 						</div>
 					</div>
@@ -54,34 +54,7 @@
 							</select>
 							</form>
 						</div>
-						<div class="row recipes">
-							<a href="#" class="dish_small">
-								<img src="images/bakedbrie.jpg" class="img-thumbnail center-block">
-								<h1>Baked brie</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
-							</a>
-							<a href="#" class="dish_small">
-								<img src="images/toast.jpg" class="img-thumbnail center-block">
-								<h1>Toast</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
-							</a>
-							<a href="#" class="dish_small">
-								<img src="images/sourdough.jpg" class="img-thumbnail center-block">
-								<h1>Sour dough</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
-							</a>
-							<a href="#" class="dish_small">
-								<img src="images/meatballs.jpg" class="img-thumbnail center-block">
-								<h1>Meatballs</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
-							
-							</a>
-							<a href="#" class="dish_small">
-								<img src="images/icecream.jpg" class="img-thumbnail center-block">
-								<h1>Icecream</h1>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc.</p>
-							</a>
-						</div>
+						<div class="row recipes" id="available_recipes"></div>
 					</div>
 				</div>
 			</div>
