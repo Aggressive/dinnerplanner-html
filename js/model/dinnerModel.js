@@ -15,7 +15,7 @@ var DinnerModel = function() {
 	//Consider it as an information you send to the view to tell it what specifically changed,
 	// so that the view doesn't need to update everything, but just specific components.
 	var notifyObservers = function(obj) {
-		for (observer in observers){
+		for (observer in this.observers){
 			observer.update(obj);
 		}
 	}
