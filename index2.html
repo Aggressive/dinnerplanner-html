@@ -13,8 +13,161 @@
 		<link rel="stylesheet" href="styles/style2.css">
 	</head>
 
-	<body>
-		<div class="container">
+	<body>	
+		<div class="container container_start" style="background-image: url(images/start.jpg);display: ;">
+			<div id="exampleView">
+				<div class="row header_start">
+					<h1>HOMELETTE</h1>
+					<h4>From the best chefs in the world directly into your kitchen</h4>
+				</div>
+				<div class="row">
+					<div class="col-md-6 start">
+						<h1>A Home Dinner Service</h1>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc. Praesent eu ipsum porta, convallis mauris ac, dictum dolor. Nunc id scelerisque lacus. Vivamus sit amet sem mauris. Fusce convallis pulvinar eleifend. Curabitur venenatis mollis dignissim.<br />
+						<button class="btn start_btn">Create new dinner</button>
+					</div>
+					<div class="col-md-6">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container container_own" style="display: ;">
+			<div id="exampleView">
+				<div class="row header">
+					<h1>HOMELETTE</h1>
+					<h4>From the best chefs in the world directly into your kitchen</h4>
+				</div>
+				<div class="row">
+					<div class="col-md-3 sidebar">
+						<div class="row sidebar_top">
+							<h3>My Dinner</h3>
+							Guests: 
+							<button id="minusGuest" class="btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
+							<span id="numberOfGuests"></span>
+							<button id="plusGuest" class="btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+						<div class="row dishlist_top">
+							Dish Name<span class="pull-right">Cost</span>
+						</div>
+						<div class="row dishlist">
+							<ul>
+								<li>Pending<span class="pull-right" id="pending_dish_price"></span></li>
+							</ul>
+						</div>
+						<div class="row dishlist_bottom">
+							<span class="pull-right">SEK <span id="total_menu_price"></span></span><br /><br />
+							<button class="center-block btn submit_btn" disabled="disabled">Confirm dinner</button>
+						</div>
+					</div>
+
+					<div class="col-md-9 mainframe">
+						<div class="row options">
+							<b>SELECT DISH</b><br />
+							<form>
+							<input type="text"><input type="submit" value="search" class="btn-sm submit_btn">
+							<select name="dishtype">
+								<option value="starter">Starter</option>
+								<option value="main">Main</option>
+								<option value="dessert">Dessert</option>
+							</select>
+							</form>
+						</div>
+						<div class="row recipes" id="available_recipes">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="container container_own" style ="display: ;">
+			<div id="exampleView">
+				<div class="row header">
+					<h1>HOMELETTE</h1>
+					<h4>From the best chefs in the world directly into your kitchen</h4>
+				</div>
+				<div class="row">
+
+					<div class="col-md-3 sidebar">
+						<div class="row sidebar_top">
+							<h3>My Dinner</h3>
+							Guests: 
+							<button id="minusGuest" class="btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
+							<span id="numberOfGuests"></span>
+							<button id="plusGuest" class="btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
+						</div>
+						<div class="row dishlist_top">
+							Dish Name<span class="pull-right">Cost</span>
+						</div>
+						<div class="row dishlist">
+							<ul>
+								<li>Pending<span class="pull-right" id="pending_dish_price"></span></li>
+							</ul>
+						</div>
+						<div class="row dishlist_bottom">
+							<span class="pull-right">SEK <span id="total_menu_price"></span></span><br /><br />
+							<button class="center-block btn submit_btn">Confirm dinner</button>
+						</div>
+					</div>
+
+					<div class="col-md-9 mainframe">
+						<div class="row">
+							<div class="col-md-6 recipe_presentation">
+								<h2><span id="dish_name1"></span></h2>
+								<h4><span id="dish_type1"></span></h4>
+								<span id="dish_picture1"></span><br /><br />
+								
+								<button class="btn submit_btn">Back to Select Dish</button>
+							</div>
+							<div class="col-md-6 recipe_ingredients">
+								<b>INGREDIENTS FOR <span id="numberOfGuests2"></span> PEOPLE</b><br />
+								<table class="table table_ingredients" id="ingredients_table">
+								</table>
+							</div>
+						</div>
+						<div class="row recipe_preparations">
+							<h2>Preparations</h2>
+							<span id="dish_prep"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container container_own" style="display: ;">
+			<div id="exampleView">
+				<div class="row header">
+					<h1>HOMELETTE</h1>
+					<h4>From the best chefs in the world directly into your kitchen</h4>
+				</div>
+				<div class="row my_dinner">
+					<p>My Dinner: <span id="numberOfGuests"></span> people</p><span class="pull-right"><button class="btn submit_btn">Go back and edit dinner</button></span>
+				</div>
+				<div id="chosen_recipes"></div>
+			</div>
+		</div>
+		<div class="container container_own" style="display: ;">
+			<div id="exampleView">
+				<div class="row header">
+					<h1>HOMELETTE</h1>
+					<h4>From the best chefs in the world directly into your kitchen</h4>
+				</div>
+				<div class="row my_dinner">
+					<p>My Dinner: <span id="numberOfGuests"></span> people</p><span class="pull-right"><button class="btn submit_btn">Go back and edit dinner</button></span>
+				</div>
+				<div class="row center" id="chosen_recipes"></div>
+				<div class="row center">
+					<button class="btn print_btn">Print Full Recipe</button>
+				
+				</div>
+			</div>
+		</div>
+		<div id="footer" class="row footer">&copy; Affe och Elias 2016</div>
+
+
+
+
+
+
+		<!--<div class="container">
 			<div id="exampleView">
 				<div id="header" class="row header">header</div>
 				<div id="content" class="row content">
@@ -25,7 +178,7 @@
 				</div>
 				<div id="footer" class="row footer">&copy; Affe och Elias 2016</div>
 			</div>
-		</div>
+		</div> -->
 	</body>
 
 	<!-- jQuery -->
@@ -33,9 +186,14 @@
 	<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
+	<script src="js/app_new.js"></script>
 	<!-- The application JavaScript code  -->
-	<script src="js/app.js"></script>
 	<script src="js/model/dinnerModel.js"></script> 
-	<script src="js/view/exampleView.js"></script>
-	<script src="js/view/exampleViewController.js"></script>
+	<script src="js/view/indexView.js"></script>
+	<script src="js/view/selectDishView.js"></script>
+	<script src="js/view/dishView.js"></script>
+	<script src="js/view/selectedDishView.js"></script>
+	<script src="js/view/dinnerOverView.js"></script>
+	<script src="js/view/dinnerPreparationView.js"></script>
+
 </html>
