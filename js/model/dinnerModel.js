@@ -2,21 +2,20 @@
 var DinnerModel = function() {
 	this.numberOfGuests = 4;
 	this.selectedDishes = [];
-	this.observers = [];
+	observers = [];
 	//this.options = []; were there any options?
 
 	//Adds new observer to the array
 	this.addObserver = function(observer) {
-		this.observers.push(observer);
-		console.log(this.observers);
+		observers.push(observer);
 	} 
 	//Will call the update method on all the observers in the array
 	//Passing an argument can be useful to differentiate between different changes. 
 	//Consider it as an information you send to the view to tell it what specifically changed,
 	// so that the view doesn't need to update everything, but just specific components.
 	var notifyObservers = function(obj) {
-		for (observer in this.observers){
-			observer.update(obj);
+		for (var i = 0; i < observers.length; i++) {
+			observers[i].update();
 		}
 	}
 

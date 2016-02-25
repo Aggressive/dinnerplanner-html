@@ -1,12 +1,13 @@
 var SelectDishView = function (container,model) {
 
 	this.update = function (obj) {
-		if(obj === "setNumberOfGuests"){
-			ingredientsTable();
-		}
-		else if(obj === "addDishToMenu" || obj === "removeDishFromMenu"){
-			this.chosenRecipes();
-		}
+		//if(obj === "setNumberOfGuests"){
+			//ingredientsTable();
+			this.numberOfGuests.html(model.getNumberOfGuests());
+		//}
+		//else if(obj === "addDishToMenu" || obj === "removeDishFromMenu"){
+			//this.chosenRecipes();
+		//}
 	}
 
 	this.availableRecipes = function(type) {
@@ -43,13 +44,16 @@ var SelectDishView = function (container,model) {
 			"</div>");
 	}
 
-	this.numberOfGuests = container.find("#numberOfGuests");
-	this.plusButton = container.find("#plusGuest");
-	this.minusButton = container.find("#minusGuest");
-	container.find("#pending_dish_price").html("0");
-	container.find("#total_menu_price").html(model.getTotalMenuPrice());
-	this.availableRecipes("starter");
+
+  	this.numberOfGuests = $("#numberOfGuests");
+	this.plusButton = $("#plusGuest");
+	this.minusButton = $("#minusGuest");
 	this.numberOfGuests.html(model.getNumberOfGuests());
 	model.addObserver(this);
+
+
+  	$("#pending_dish_price").html("0");
+	$("#total_menu_price").html(model.getTotalMenuPrice());
+	this.availableRecipes("starter");
 
 }
