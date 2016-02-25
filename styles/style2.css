@@ -155,6 +155,10 @@ body {
 	padding: 1em;
 }
 
+.dontDisplay {
+	display: none;
+}
+
 .recipe_presentation p {
 	margin-top: 1em;
 	font-size: 12px;

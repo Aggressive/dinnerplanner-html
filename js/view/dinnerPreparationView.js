@@ -32,8 +32,5 @@ var DinnerPreparationView = function (container,model) {
 		}
 	}
 
-	model.addDishToMenu(1);
-	model.addDishToMenu(100);
-	model.addDishToMenu(200);
 	this.prepRecipes();
 }

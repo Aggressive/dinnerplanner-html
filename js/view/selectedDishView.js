@@ -28,8 +28,6 @@ var SelectedDishView = function (container,model) {
 	this.minusButton = container.find("#minusGuest");
 	model.addObserver(this);
 	this.numberOfGuests.html(model.getNumberOfGuests());
-
-	model.addDishToMenu(1);
 	container.find("#chosen_dish_name").html(model.getDish(1).name);
 	container.find("#chosen_dish_price").html(model.getDishPrice(1));
 	container.find("#pending_dish_price").html("0");

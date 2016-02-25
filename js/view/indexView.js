@@ -9,5 +9,7 @@ var IndexView = function (container,model) {
 		
 	}
 
+	this.createButton = $('#createButton');
+
 	model.addObserver(this);
 }

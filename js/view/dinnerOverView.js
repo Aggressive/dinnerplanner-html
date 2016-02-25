@@ -28,10 +28,6 @@ var DinnerOverView = function (container,model) {
 			"</div>");
 	}
 
-
-	model.addDishToMenu(1);
-	model.addDishToMenu(100);
-	model.addDishToMenu(200);
-
+	model.addObserver(this);
 	this.chosenRecipes();
 }

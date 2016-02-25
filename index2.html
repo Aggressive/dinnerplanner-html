@@ -14,7 +14,7 @@
 	</head>
 
 	<body>	
-		<div class="container container_start" style="background-image: url(images/start.jpg);display: ;">
+		<div id="index" class="container container_start" style="background-image: url(images/start.jpg);display: ;">
 			<div id="exampleView">
 				<div class="row header_start">
 					<h1>HOMELETTE</h1>
@@ -24,7 +24,7 @@
 					<div class="col-md-6 start">
 						<h1>A Home Dinner Service</h1>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id lorem molestie, egestas enim vel, aliquam nunc. Praesent eu ipsum porta, convallis mauris ac, dictum dolor. Nunc id scelerisque lacus. Vivamus sit amet sem mauris. Fusce convallis pulvinar eleifend. Curabitur venenatis mollis dignissim.<br />
-						<button class="btn start_btn">Create new dinner</button>
+						<button id="createButton" class="btn start_btn">Create new dinner</button>
 					</div>
 					<div class="col-md-6">
 
@@ -32,7 +32,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container container_own" style="display: ;">
+		<div id="selectDish" class="container container_own dontDisplay" >
 			<div id="exampleView">
 				<div class="row header">
 					<h1>HOMELETTE</h1>
@@ -79,7 +79,7 @@
 				</div>
 			</div>
 		</div>
-	<div class="container container_own" style ="display: ;">
+	<div class="container container_own dontDisplay">
 			<div id="exampleView">
 				<div class="row header">
 					<h1>HOMELETTE</h1>
@@ -132,7 +132,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container container_own" style="display: ;">
+		<div class="container container_own dontDisplay">
 			<div id="exampleView">
 				<div class="row header">
 					<h1>HOMELETTE</h1>
@@ -144,7 +144,7 @@
 				<div id="chosen_recipes"></div>
 			</div>
 		</div>
-		<div class="container container_own" style="display: ;">
+		<div class="container container_own dontDisplay">
 			<div id="exampleView">
 				<div class="row header">
 					<h1>HOMELETTE</h1>
@@ -189,11 +189,14 @@
 	<script src="js/app_new.js"></script>
 	<!-- The application JavaScript code  -->
 	<script src="js/model/dinnerModel.js"></script> 
+
 	<script src="js/view/indexView.js"></script>
 	<script src="js/view/selectDishView.js"></script>
 	<script src="js/view/dishView.js"></script>
 	<script src="js/view/selectedDishView.js"></script>
 	<script src="js/view/dinnerOverView.js"></script>
 	<script src="js/view/dinnerPreparationView.js"></script>
+
+	<script src="js/controller/indexViewController.js"></script>
 
 </html>
