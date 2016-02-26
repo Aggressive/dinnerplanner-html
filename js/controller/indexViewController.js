@@ -8,5 +8,4 @@ var IndexViewController = function(view, model ) {
 	view.createButton.on('click', function(event) {
 		indexToSelect();
 	});
-
 }

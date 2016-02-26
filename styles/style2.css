@@ -138,6 +138,14 @@ body {
 	border: 0;
 }
 
+.table_ingredients td {
+	padding: 5px 0px 5px 0px;
+}
+
+.table_ingredients_bottom {
+	border: 0;
+}
+
 .my_dinner {
 	background-color: #ffe599;
 	min-height: 4em;
@@ -168,9 +176,62 @@ body {
 	padding: 1em;
 }
 
+.ingredients_sum {
+	font-weight: bold;
+	border-top: 1px solid #000;
+}
+
+.recipe_ingredients {
+	background-color: #ffe599;
+	padding: 1em;
+	border-left: 3px solid #000;
+	border-bottom: 3px solid #000;
+}
+
 .options {
 	background-color: #ffe599;
 	min-height: 7em;
 	padding: 1em;
 	border-bottom: 3px solid #000;
+}
+
+.total_price {
+	width: 10em;
+	display: inline-block;
+	text-align: left;
+	margin-left: 3em;
+}
+
+.total_price h4 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #cc0000;
+}
+
+.center {
+	margin: auto;
+	padding: 1em;
+	text-align: center;
+}
+
+.print_btn {
+	background-color: #f6b26b;
+	color: #000;
+	border: 2px solid #000;
+	font-size: 18px;
+	padding: 0.5em;
+	width: 20em;
+}
+
+.preparation {
+	padding: 2em;
+}
+
+.preparation h3 {
+	margin: 0 0 0.5em 0;
+	font-weight: bold;
+}
+
+.preparation h4 {
+	margin: 0 0 0.5em 0;
 }

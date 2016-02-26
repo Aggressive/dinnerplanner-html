@@ -1,10 +1,7 @@
 var DinnerPreparationView = function (container,model) {
 	this.update = function (obj) {
-		if(obj === "setNumberOfGuests"){
-			ingredientsTable();
-		}
-		else if(obj === "addDishToMenu" || obj === "removeDishFromMenu"){
-			this.chosenRecipes();
+		if(obj === "addDishToMenu" || obj === "removeDishFromMenu" || obj === "setNumberOfGuests") {
+			this.prepRecipes();
 		}
 	}
 
@@ -13,7 +10,8 @@ var DinnerPreparationView = function (container,model) {
 
 		var numRecipes = dishes.length;
 
-		var output = document.getElementById("chosen_recipes");
+		var output = $('#chosen_recipes_prep');
+		output.html("");
 		for(var i=0; i<numRecipes; i++) {
 			$(output).append(
 				"<div class=\"row preparation\">"+
@@ -32,5 +30,5 @@ var DinnerPreparationView = function (container,model) {
 		}
 	}
 
-	this.prepRecipes();
+	//this.prepRecipes();
 }

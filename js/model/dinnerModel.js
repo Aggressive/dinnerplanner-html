@@ -3,6 +3,7 @@ var DinnerModel = function() {
 	this.numberOfGuests = 4;
 	this.selectedDishes = [];
 	observers = [];
+	this.currentDishID = 0;
 	//this.options = []; were there any options?
 
 	//Adds new observer to the array
@@ -15,7 +16,7 @@ var DinnerModel = function() {
 	// so that the view doesn't need to update everything, but just specific components.
 	var notifyObservers = function(obj) {
 		for (var i = 0; i < observers.length; i++) {
-			observers[i].update();
+			observers[i].update(obj);
 		}
 	}
 
@@ -26,6 +27,15 @@ var DinnerModel = function() {
 
 	this.getNumberOfGuests = function() {
 		return this.numberOfGuests;
+	}
+
+	this.setCurrentDishID = function(id) {
+		this.currentDishID = id;
+		notifyObservers("setCurrentDishID");
+	}
+
+	this.getCurrentDishID = function() {
+		return this.currentDishID;
 	}
 
 	//Returns the dish that is on the menu for selected type 
@@ -48,10 +58,19 @@ var DinnerModel = function() {
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
 		var ingList = [];
-	  	for(key in this.selectedDishes){
-	  		ingList.push(this.selectedDishes[key].ingredients);
+		for(key in this.selectedDishes){
+			ingList.push(this.selectedDishes[key].ingredients);
 		}
 		return ingList;
+	}
+
+	//Returns all ingredients for selected dish
+	this.getDishIngredients = function(id) {
+		for(var i = 0; i < dishes.length; i++) {
+			if(dishes[i].id == id) {
+				return dishes[i].ingredients;
+			}
+		}
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
@@ -107,16 +126,20 @@ var DinnerModel = function() {
 		if(filter){
 			found = false;
 			$.each(dish.ingredients,function(index,ingredient) {
-				if(ingredient.name.indexOf(filter)!=-1) {
+				if(ingredient.name.toLowerCase().indexOf(filter.toLowerCase())!=-1) {
 					found = true;
 				}
 			});
-			if(dish.name.indexOf(filter) != -1)
+			if(dish.name.toLowerCase().indexOf(filter.toLowerCase()) != -1)
 			{
 				found = true;
 			}
 		}
-	  	return dish.type == type && found;
+		if(type) {
+			return dish.type == type && found;
+		} else {
+			return found;
+		}
 	  });	
 	}
 
