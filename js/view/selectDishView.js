@@ -4,6 +4,10 @@ var SelectDishView = function (container,model) {
 		//if(obj === "setNumberOfGuests"){
 			//ingredientsTable();
 			this.numberOfGuests.html(model.getNumberOfGuests());
+			//if(this.numberOfGuests == 1){
+				console.log("disabled");
+				$("#minusGuest").disabled = true;
+			//}
 		//}
 		//else if(obj === "addDishToMenu" || obj === "removeDishFromMenu"){
 			//this.chosenRecipes();
