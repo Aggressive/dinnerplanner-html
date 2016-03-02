@@ -21,11 +21,10 @@ var SelectDishView = function (container,model) {
 		this.ulDishes.html("");
 		var selectedDishes = model.getSelectedDish();
 		for(var i = 0; i < selectedDishes.length; i++) {
-			this.ulDishes.append("<li>"+selectedDishes[i].name+"<span class='pull-right'>"+model.getDishPrice(selectedDishes[i].id)+"</span></li>");
+			this.ulDishes.append("<li>"+selectedDishes[i].name+"<button type='button' class='close delete_button' aria-label='Close'>&times;</button> <span class='pull-right'>"+model.getDishPrice(selectedDishes[i].id)+"</span></li>");
 		}
 		if(selectedDishes.length > 0) {
 			this.confirmDinnerButton.removeAttr("disabled");
-			//this.confirmDinnerButton.setAttribute("disabled","");
 		}
 		//this.ulDishes.append("<li>Pending<span class='pull-right' id='pending_dish_price'></span></li>");
 	}
@@ -98,6 +97,7 @@ var SelectDishView = function (container,model) {
 	}
 
 	this.mainframe = $('#mainframe');
+	this.ulOfDishes = $('#ul_of_dishes');
 	this.options = $('#options');
 	this.available_recipes = $('#available_recipes');
 	this.recipe_view = $('#recipe_view');

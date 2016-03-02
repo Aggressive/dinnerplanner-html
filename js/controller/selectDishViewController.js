@@ -11,7 +11,6 @@ var SelectDishViewController = function(view, model) {
 	}
 
 	$('.dish_small').click(function() {
-		//selectToDish(this.id);
 		view.viewDish(this.id);
 		model.setCurrentDishID(this.id);
 	});
@@ -29,6 +28,10 @@ var SelectDishViewController = function(view, model) {
 	view.searchForm.on('submit', function(event) {
 		event.preventDefault();
 		view.availableRecipes(this.elements[2].value, this.elements[0].value);
+		$('.dish_small').click(function() {
+			view.viewDish(this.id);
+			model.setCurrentDishID(this.id);
+		});
 	});
 
 	view.backButton.on('click', function(event) {
@@ -40,6 +43,15 @@ var SelectDishViewController = function(view, model) {
 		model.addDishToMenu(model.getCurrentDishID());
 		view.toggleView();
 		model.setCurrentDishID(0);
+		$('.delete_button').click(function() {
+			console.log("id: "+this.id);
+			model.removeDishFromMenu(this.id);
+		});
+	});
+
+	//DELETE???
+	view.ulOfDishes.on('click', function(event) {
+		console.log("asd");
 	});
 
 	view.confirmDinnerButton.on('click', function(event) {
