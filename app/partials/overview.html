@@ -1,0 +1,19 @@
+<div class="row white">
+    <ng-include src="'partials/overview-topbar.html'" ng-controller="OverviewCtrl"></ng-include>
+
+    <!-- DINNER OVERVIEW -->
+    <div id="chosen_recipes" class="row center">
+        <div class="dish_small" ng-repeat="dish in dishes">
+            <img src="{{dish.ImageURL}}" class="img-thumbnail center-block" width="120">
+            <h1>{{dish.Title}}</h1>
+            <h4 class="text-right">{{fixedNumber(getDishPrice(dish))}} SEK</h4>
+        </div>
+        <div class="total_price">
+            Total:<br />
+            <h4>{{fixedNumber(getTotalMenuPrice())}} SEK</h4>
+        </div>
+    </div>
+    <div id="chosen_recipes_bottom" class="row center">
+        <a href="#/preparation" class="btn print_btn">Print Full Recipe</a>
+    </div>
+</div>

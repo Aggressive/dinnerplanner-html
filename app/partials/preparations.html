@@ -1,0 +1,21 @@
+<div class="row white">
+    <ng-include src="'partials/overview-topbar.html'" ng-controller="OverviewCtrl"></ng-include>
+    <!-- DINNER PREPARATION -->
+    <div id="chosen_recipes_prep" class="row">
+        <div class='row preparation' ng-repeat="dish in dishes">
+            <div class='col-md-2'>
+                <img src='{{dish.ImageURL}}' class='img-thumbnail center-block' width='120'>
+            </div>
+            <div class='col-md-4'>
+                <h3>{{dish.Title.toUpperCase()}}</h3>
+                <ul>
+                    <li ng-repeat="ing in dish.Ingredients">{{ingredientsPrint(ing,dish)}}</li>
+                </ul>
+            </div>
+            <div class='col-md-6'>
+                <h4>PREPARATION</h4>
+                {{dish.Instructions}}
+            </div>
+        </div>
+    </div>
+</div>
