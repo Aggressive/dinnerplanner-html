@@ -1,5 +1,44 @@
-<!-- We include the sidebar as it is shared across two screens. -->
-<ng-include src="'partials/dinner-sidebar.html'" ng-controller="DinnerCtrl"></ng-include>
+<div class="row white">
+    <div class="col-md-3 sidebar">
+        <ng-include src="'partials/dinner-sidebar.html'" ng-controller="DinnerCtrl"></ng-include>
+    </div>
 
-<!-- TODO in Lab 5: Display the dish information including image, Description, 
-Instructions, Ingredients and total cost. -->
+    <!-- TODO in Lab 5: Display the dish information including image, Description, 
+    Instructions, Ingredients and total cost. -->
+
+    <div id="mainframe" class="col-md-9 mainframe">
+        <div id="recipe_top" class="row">
+            <div class="col-md-6 recipe_presentation">
+                <h2>{{name}}</h2>
+                <h4>{{type}}</h4>
+                <img src="{{image}}" width="300"><br /><br />
+                {{description}}<br /><br />
+                
+                <a href="#/search" class="btn submit_btn">Back to Select Dish</a>
+            </div>
+            <div class="col-md-6 recipe_ingredients">
+                <b>INGREDIENTS FOR {{getNumberOfGuests()}} PEOPLE</b><br />
+                <table class="table table_ingredients" id="ingredients_table">
+                    <tr ng-repeat="ing in ingredients">
+                        <td>{{fixedNumber(ingredientAmount(ing))}} {{ing.MetricUnit}}</td>
+                        <td>{{ing.Name}}</td>
+                        <td>SEK</td>
+                        <td>{{fixedNumber(ingredientAmount(ing))}}</td>
+                    </tr>
+                </table>
+                <table class="table table_ingredients_bottom" id="ingredients_table_bottom">
+                    <tr class="ingredients_sum">
+                        <td><a href="#/search" class='btn submit_btn' ng-click="addDishToMenu()">Confirm Dish</a></td>
+                        <td></td>
+                        <td align="right">SEK</td>
+                        <td align="right">{{totalCost()}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="recipe_preparations" class="row recipe_preparations">
+            <h2>Preparations</h2>
+            {{preparations}}
+        </div>
+    </div>
+</div>
